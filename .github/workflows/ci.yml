@@ -69,7 +69,7 @@ jobs:
           bundler-cache: true
 
       - name: Install Playwright Chromium browser (with deps)
-        run: yarn run playwright install --with-deps chromium
+        run: yarn add -D "playwright@1.49.0 && yarn run playwright install --with-deps chromium
 
       - name: Install Playwright Chromium browser deps
         run: yarn run playwright install-deps chromium
