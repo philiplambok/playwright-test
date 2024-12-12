@@ -5,5 +5,6 @@ RSpec.describe "Home", type: :feature do
     visit '/messages'
 
     expect(page).to have_text('Messages')
+    expect(page).to have_text('Hello from JavaScript!')
   end
 end
