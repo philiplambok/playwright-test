@@ -26,6 +26,17 @@ require 'capybara/rails'
 #
 # Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
 
+Capybara.register_driver(:playwright) do |app|
+  Capybara::Playwright::Driver.new(
+    app, 
+    browser_type: :firefox, 
+    headless: true,
+  )
+end
+Capybara.default_max_wait_time = 15
+Capybara.default_driver = :playwright
+Capybara.save_path = 'tmp/capybara'
+
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
 begin

@@ -48,6 +48,7 @@ group :development, :test do
   gem "brakeman", require: false
 
   gem 'rspec-rails', '~> 7.0.0'
+  gem 'capybara-playwright-driver'
   gem 'capybara'
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
