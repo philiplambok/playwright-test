@@ -28,8 +28,8 @@ require 'capybara/rails'
 
 Capybara.register_driver(:playwright) do |app|
   Capybara::Playwright::Driver.new(
-    app, 
-    browser_type: :firefox, 
+    app,
+    browser_type: :firefox,
     headless: true,
   )
 end
